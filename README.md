@@ -1,3 +1,3 @@
-## Please checkout my profile at:   also check out my gf's ig
+## Profile hosted at: 
 
-### kevinamarbayar.com         @jasminestory
+### kevinamarbayar.com        
