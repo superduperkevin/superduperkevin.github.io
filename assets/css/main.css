@@ -906,9 +906,13 @@ input, select, textarea {
 /* Icons */
 
 	ul.icons {
+		display: flex;
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		justify-content: center;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
 	}
 
 		ul.icons li {
@@ -1773,6 +1777,11 @@ input, select, textarea {
 	color: #ACEE;
 	font-size: 1.5rem;
 }
+
+button {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
 
 @media screen and (max-width: 600px) {
 	.stack {
