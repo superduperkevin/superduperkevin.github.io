@@ -1672,11 +1672,6 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-
-/* .logo i {
-	font-size: 1.5rem;
-} */
-
 .logo img {
 	width: 90%;
 	height: 100%;
@@ -1771,6 +1766,11 @@ input, select, textarea {
 
 button {
 	font-family: "Source Sans Pro", sans-serif;
+}
+
+#my-form-status {
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 @media screen and (max-width: 600px) {
