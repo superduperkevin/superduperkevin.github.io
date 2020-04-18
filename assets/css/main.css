@@ -1740,18 +1740,9 @@ input, select, textarea {
 	line-height: 0;
   }
 
-/* .imageicons {
-	position: relative;
-}
-
-.imageicons ul {
-	position: absolute;
-} */
-
 .date p {
 	line-height: 1.5;
 }
-
 
 .ec-activity {
 	margin-left: 0.3rem;
@@ -1781,7 +1772,6 @@ input, select, textarea {
 button {
 	font-family: "Source Sans Pro", sans-serif;
 }
-
 
 @media screen and (max-width: 600px) {
 	.stack {

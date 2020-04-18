@@ -206,7 +206,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form action="contact-form.php" method="POST">
+								<form action="https://formspree.io/xqkdvabd" method="POST" id="contact-form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -218,18 +218,19 @@
 										</div>
 										<div class="field">
 											<label for="subject">Subject</label>
-											<input type="text" name="subject" rows="1" required/>
+											<input type="text" name="subject" id="subject" rows="1" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea type="text" name="message" rows="4" required></textarea>
+											<textarea type="text" name="message" rows="4" id="message" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><button type="submit" name="submit" value="Send Message" class="primary">Send Message</button></li>
+										<li><button type="submit" name="submit" id="submit" value="Send Message" class="primary">Send Message</button></li>
 										<li><button type="reset" name="reset" value="Reset">Reset</button></li>
 									</ul>
 								</form>
+								<p id="my-form-status">Not submitted</p>
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/kevin-amarbayar" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://www.github.com/superduperkevin" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
@@ -255,6 +256,54 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				window.addEventListener("DOMContentLoaded", function() {
+			  
+				  // get the form elements defined in your form HTML above
+				  
+				  var form = document.getElementById("contact-form");
+				  var button = document.getElementById("submit");
+				  var status = document.getElementById("my-form-status");
+			  
+				  // Success and Error functions for after the form is submitted
+				  
+				  function success() {
+					form.reset();
+					button.style = "display: none ";
+					status.innerHTML = "Thanks!";
+				  }
+			  
+				  function error() {
+					status.innerHTML = "Oops! There was a problem.";
+				  }
+			  
+				  // handle the form submission event
+			  
+				  form.addEventListener("submit", function(ev) {
+					ev.preventDefault();
+					var data = new FormData(form);
+					ajax(form.method, form.action, data, success, error);
+				  });
+				});
+				
+				// helper function for sending an AJAX request
+			  
+				function ajax(method, url, data, success, error) {
+				  var xhr = new XMLHttpRequest();
+				  xhr.open(method, url);
+				  xhr.setRequestHeader("Accept", "application/json");
+				  xhr.onreadystatechange = function() {
+					if (xhr.readyState !== XMLHttpRequest.DONE) return;
+					if (xhr.status === 200) {
+					  success(xhr.response, xhr.responseType);
+					} else {
+					  error(xhr.status, xhr.response, xhr.responseType);
+					}
+				  };
+				  xhr.send(data);
+				}
+			  </script>
 
 	</body>
 </html>
