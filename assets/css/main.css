@@ -912,7 +912,7 @@ input, select, textarea {
 		list-style: none;
 		padding-left: 0;
 		justify-content: center;
-		margin-top: 3rem;
+		/* margin-top: 0rem; */
 		margin-bottom: 1rem;
 	}
 
@@ -1555,9 +1555,9 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 3rem 2.5rem ;
+			padding: 4.5rem 3rem 3rem 3rem ;
 			position: relative;
-			width: 40rem;
+			width: 60rem;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
@@ -1778,4 +1778,13 @@ button {
 	.stack {
 		font-size: 0.6rem;
 	}
+}
+
+.project-4 {
+	margin-bottom: 2rem;
+}
+
+.download h4 {
+	margin-bottom: 2rem;
+	color: #777;
 }
