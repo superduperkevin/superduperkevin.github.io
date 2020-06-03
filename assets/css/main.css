@@ -27,7 +27,8 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -702,17 +703,16 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.main {
+		.image .main {
 			display: block;
-			/* margin: 2.5rem 0; */
 			margin: 1rem 0; /*User change*/
 			width: 100%;
+			height: 10%;
 		}
 
 			.image.main img {
 				width: 100%;
-				/* height: 50%; */
-				/* object-fit: scale-down; */
+				/* height: 100%; */
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1559,6 +1559,7 @@ input, select, textarea {
 			position: relative;
 			width: 60rem;
 			max-width: 100%;
+			height: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
@@ -1682,9 +1683,9 @@ input, select, textarea {
 
 .portfolio-images {
 	display: grid;
-	grid-template-columns: 47.5% 47.5%;
-	grid-template-rows: min-content min-content;
-	grid-gap: 5%;
+	grid-template-columns: 48% 48%;
+	grid-template-rows: repeat(auto-fill, min-content);
+	grid-gap: 4%;
 }
 
 .portfolio-item-1 {
@@ -1790,9 +1791,9 @@ button {
 	}
 }
 
-.project-4 {
+/* .project-4 {
 	margin-bottom: 2rem;
-}
+} */
 
 h2.major {
 	border-color: rgb(4, 119, 196);
