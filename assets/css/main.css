@@ -1643,3 +1643,37 @@ h2.major {
 .title-date {
 	margin-top: 3rem;
 }
+
+.project span:hover .project-info p {
+	position: relative;
+	animation: description;
+	animation-duration: 1s;
+}
+
+.project span:hover .stack {
+	position: relative;
+	animation: stack;
+	animation-duration: 1s;
+}
+
+.project span:hover .icons {
+	position: relative;
+	animation: icons;
+	animation-duration: 1s;
+}
+
+@keyframes icons {
+	0% {top: 50px}
+	100% {top: 0}
+}
+
+@keyframes description {
+	0% {top: -50px}
+	100% {top: 0}
+}
+
+@keyframes stack {
+	0% {opacity: 0}
+	50% {opacity: 0.8}
+	100% {opacity: 1}
+}
