@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
 var form = document.getElementById("contact-form");
 var status = document.getElementById("my-form-status");
 
-// Success and Error functions for after the form is submitted
+// Success and Error functions for after the form is submitted.
 
 function success() {
 form.reset();
